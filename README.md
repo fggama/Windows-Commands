@@ -15,5 +15,11 @@ Useful commands and resources
 >cat dump_xxxxxx.sql | docker exec -i proy-postgres psql -U postgres
 ## Disk: 
 >C:\Users\garciafr\AppData\Local\Docker\wsl\data
-## Volumes en Windows: 
+## Windows Volumes: 
 >\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\
+## IP Addres
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' cece0c5c952b
+## shell
+docker exec -it inspector_broker sh
+## copy external
+docker cp inspector_broker.py inspector_broker:/code/inspector_broker.py
